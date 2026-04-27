@@ -1,0 +1,49 @@
+# ---------------- Python ----------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ---------------- Entornos virtuales ----------------
+.venv/
+venv/
+env/
+ENV/
+
+# ---------------- Notebooks ----------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ---------------- VS Code ----------------
+.vscode/
+*.code-workspace
+
+# ---------------- Herramientas de IA / asistentes ----------------
+.claude/
+.cursor/
+.aider*
+
+# ---------------- Sistema operativo ----------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------------- Distribución / build ----------------
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ---------------- Caches y logs ----------------
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+
+# ---------------- Datos pesados / temporales ----------------
+# (descomenta si en el futuro tienes datasets grandes que no quieras subir)
+# data/raw/
+# data/processed/*.parquet
+*.tmp
+*.bak
