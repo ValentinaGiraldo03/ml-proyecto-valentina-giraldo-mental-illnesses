@@ -1,0 +1,133 @@
+{
+  "seed": 42,
+  "n_train": 4920,
+  "n_test": 1230,
+  "n_countries_train": 164,
+  "n_countries_test": 41,
+  "features": [
+    "schizophrenia",
+    "anxiety",
+    "bipolar",
+    "eating",
+    "Year"
+  ],
+  "target": "depression",
+  "cv_table": [
+    {
+      "model": "Dummy (media)",
+      "cv_rmse_mean": 0.9674354539306613,
+      "cv_rmse_std": 0.11264727640028442
+    },
+    {
+      "model": "LinReg (baseline)",
+      "cv_rmse_mean": 0.7623991280394519,
+      "cv_rmse_std": 0.1985658398885214
+    },
+    {
+      "model": "ElasticNet",
+      "cv_rmse_mean": 0.7616786711545982,
+      "cv_rmse_std": 0.19832682880558952
+    },
+    {
+      "model": "RandomForest",
+      "cv_rmse_mean": 0.7722996480185568,
+      "cv_rmse_std": 0.1406579399396661
+    },
+    {
+      "model": "HistGB",
+      "cv_rmse_mean": 0.7593909697434587,
+      "cv_rmse_std": 0.13310647120566962
+    }
+  ],
+  "tuned_best_params": {
+    "ElasticNet": {
+      "model__alpha": 0.01,
+      "model__l1_ratio": 0.9
+    },
+    "RandomForest": {
+      "model__max_depth": 8,
+      "model__min_samples_leaf": 1,
+      "model__n_estimators": 300
+    },
+    "HistGB": {
+      "model__learning_rate": 0.1,
+      "model__max_depth": 6,
+      "model__max_iter": 600
+    }
+  },
+  "test_metrics": {
+    "Dummy": {
+      "RMSE": 0.8284965736130673,
+      "MAE": 0.7019490395652388,
+      "R2": -0.03081912645360041
+    },
+    "LinReg": {
+      "RMSE": 0.9140606486901679,
+      "MAE": 0.6601965825650261,
+      "R2": -0.25473224742713185
+    },
+    "ElasticNet": {
+      "RMSE": 0.9050711044938833,
+      "MAE": 0.6543686707571117,
+      "R2": -0.23017368951281547
+    },
+    "RandomForest": {
+      "RMSE": 0.7505033202851655,
+      "MAE": 0.6005669483629679,
+      "R2": 0.1541248418865051
+    },
+    "HistGB": {
+      "RMSE": 0.6488731862153961,
+      "MAE": 0.5217525724154344,
+      "R2": 0.36770362697388326
+    }
+  },
+  "best_family_cv": "HistGB",
+  "permutation_importance": {
+    "model": "HistGB",
+    "features": [
+      "schizophrenia",
+      "anxiety",
+      "bipolar",
+      "eating",
+      "Year"
+    ],
+    "importance_mean": [
+      0.45566465495426406,
+      0.2430091889711376,
+      0.0801867395728326,
+      0.10454376979556664,
+      0.0037510668833003746
+    ],
+    "importance_std": [
+      0.015726006007405334,
+      0.011065579963489322,
+      0.008936207962106377,
+      0.005410247547799438,
+      0.0023515551741181448
+    ]
+  },
+  "top_error_countries": {
+    "Peru": 1.5685,
+    "Morocco": 1.2631,
+    "Cuba": 1.2004,
+    "Lesotho": 1.0417,
+    "Portugal": 0.9376,
+    "South Africa": 0.9063,
+    "Sweden": 0.8895,
+    "Ukraine": 0.8466,
+    "Poland": 0.7658,
+    "Germany": 0.7546,
+    "Belize": 0.6518,
+    "Sierra Leone": 0.6033,
+    "Honduras": 0.586,
+    "Kuwait": 0.5849,
+    "Brazil": 0.5733
+  },
+  "test_y_stats": {
+    "mean": 3.880772398536585,
+    "std": 0.8160175188516576,
+    "min": 2.1114995,
+    "max": 5.779253
+  }
+}
