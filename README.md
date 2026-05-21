@@ -1,4 +1,4 @@
-# Proyecto aplicado — Aprendizaje de Máquina (EAFIT)
+# Proyecto aplicado. Aprendizaje de Máquina 
 
 **Dataset:** *Mental Illnesses Prevalence* (IHME — Global Burden of Disease, publicado por Our World in Data).
 **Marco metodológico:** CRISP-DM.
