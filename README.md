@@ -4,6 +4,16 @@
 **Marco metodológico:** CRISP-DM.
 **Estado:** Entrega 1 · **Entrega 2* 
 
+Proyecto de regresión supervisada para estimar la **prevalencia de depresión**
+  a nivel país-año a partir de la prevalencia de otros trastornos mentales
+  (esquizofrenia, ansiedad, trastorno bipolar, trastornos alimentarios) y el año.
+
+  La salud mental es un componente esencial del bienestar humano: se estima que
+  1 de cada 3 mujeres y 1 de cada 5 hombres experimentarán depresión mayor a lo
+  largo de su vida. Entender cómo se relacionan los distintos trastornos puede
+  ayudar a anticipar la carga de enfermedad en países con menos datos disponibles
+  y orientar la planificación de recursos en salud pública.
+
 ---
 ## 1. ¿Cómo reproducir los resultados?
 
