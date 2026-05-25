@@ -1,0 +1,200 @@
+{
+  "seed": 42,
+  "n_train": 4920,
+  "n_test": 1230,
+  "n_countries_train": 164,
+  "n_countries_test": 41,
+  "features": [
+    "schizophrenia",
+    "anxiety",
+    "bipolar",
+    "eating",
+    "Year"
+  ],
+  "target": "depression",
+  "tuning": {
+    "HistGB": {
+      "cv_rmse_mean": 0.732186434811634,
+      "cv_rmse_std": 0.1371356262310206,
+      "best_params": {
+        "model__l2_regularization": 0.1,
+        "model__learning_rate": 0.03,
+        "model__max_depth": 4,
+        "model__max_iter": 500,
+        "model__min_samples_leaf": 20
+      }
+    },
+    "RF": {
+      "cv_rmse_mean": 0.7183569615698427,
+      "cv_rmse_std": 0.1295199451540921,
+      "best_params": {
+        "model__max_depth": 8,
+        "model__max_features": "sqrt",
+        "model__min_samples_leaf": 3,
+        "model__n_estimators": 800
+      }
+    }
+  },
+  "test_metrics": {
+    "HistGB (tuneado)": {
+      "RMSE": 0.642121815229072,
+      "MAE": 0.5001606627055363,
+      "R2": 0.3807929615419039
+    },
+    "RF (tuneado)": {
+      "RMSE": 0.6180005461400377,
+      "MAE": 0.5167683606370702,
+      "R2": 0.42644013669987335
+    },
+    "Ensemble (HistGB+RF)": {
+      "RMSE": 0.6186190204964213,
+      "MAE": 0.5000162762247463,
+      "R2": 0.4252915630569022
+    }
+  },
+  "final_model": "RF (tuneado)",
+  "final_test_metrics": {
+    "RMSE": 0.6180005461400377,
+    "MAE": 0.5167683606370702,
+    "R2": 0.42644013669987335
+  },
+  "bootstrap_ci": {
+    "RMSE": {
+      "mean": 0.6179697430801016,
+      "lo": 0.5973827974726845,
+      "hi": 0.63801976831608
+    },
+    "MAE": {
+      "mean": 0.5167641760553359,
+      "lo": 0.4979247582242058,
+      "hi": 0.5356823153758544
+    },
+    "R2": {
+      "mean": 0.4256166109099517,
+      "lo": 0.379893173142329,
+      "hi": 0.46681746269233365
+    }
+  },
+  "seed_sensitivity": [
+    {
+      "RMSE": 0.5715654245007421,
+      "MAE": 0.43632446878509673,
+      "R2": 0.513099696541895,
+      "seed": 0,
+      "n_test_countries": 41
+    },
+    {
+      "RMSE": 0.7440740404435214,
+      "MAE": 0.5553064424671382,
+      "R2": 0.5817101189004545,
+      "seed": 1,
+      "n_test_countries": 41
+    },
+    {
+      "RMSE": 0.9343922121238513,
+      "MAE": 0.7332719891122871,
+      "R2": 0.23669336729916512,
+      "seed": 7,
+      "n_test_countries": 41
+    },
+    {
+      "RMSE": 0.6654997970459854,
+      "MAE": 0.5037607961025277,
+      "R2": 0.15701194517362682,
+      "seed": 21,
+      "n_test_countries": 41
+    },
+    {
+      "RMSE": 0.642121815229072,
+      "MAE": 0.5001606627055363,
+      "R2": 0.3807929615419039,
+      "seed": 42,
+      "n_test_countries": 41
+    }
+  ],
+  "temporal_validation": {
+    "year_cut": 2009,
+    "n_train": 4100,
+    "n_test": 2050,
+    "RMSE": 0.3803448017968594,
+    "MAE": 0.27218187282243783,
+    "R2": 0.8279118917340031
+  },
+  "ablation": {
+    "_baseline_all_features": {
+      "RMSE": 0.642121815229072,
+      "delta_RMSE": 0.0
+    },
+    "schizophrenia": {
+      "RMSE": 0.7340074804771953,
+      "delta_RMSE": 0.09188566524812336
+    },
+    "anxiety": {
+      "RMSE": 0.689075303969071,
+      "delta_RMSE": 0.04695348873999905
+    },
+    "bipolar": {
+      "RMSE": 0.6576156003703693,
+      "delta_RMSE": 0.01549378514129729
+    },
+    "eating": {
+      "RMSE": 0.6689208088196185,
+      "delta_RMSE": 0.026798993590546494
+    },
+    "Year": {
+      "RMSE": 0.6227018704387404,
+      "delta_RMSE": -0.0194199447903316
+    }
+  },
+  "permutation_importance": {
+    "features": [
+      "schizophrenia",
+      "anxiety",
+      "bipolar",
+      "eating",
+      "Year"
+    ],
+    "importance_mean": [
+      0.2821376414409952,
+      0.08306528714864146,
+      0.06843099342455758,
+      0.018964845766199608,
+      -0.0003256088523940659
+    ],
+    "importance_std": [
+      0.012600582880634741,
+      0.005272008106671176,
+      0.006737516671544495,
+      0.0036907899131575907,
+      0.00024867824788480183
+    ]
+  },
+  "top_error_countries": {
+    "Peru": 1.31,
+    "Morocco": 0.9875,
+    "Germany": 0.972,
+    "Poland": 0.9414,
+    "Cuba": 0.9331,
+    "Lesotho": 0.8638,
+    "Honduras": 0.8528,
+    "South Africa": 0.799,
+    "Ukraine": 0.7611,
+    "United States": 0.7459,
+    "Portugal": 0.7067,
+    "Gabon": 0.6832,
+    "Latvia": 0.6741,
+    "Saint Kitts and Nevis": 0.6619,
+    "Australia": 0.6516,
+    "Brazil": 0.6387,
+    "Sweden": 0.6125,
+    "Ireland": 0.5712,
+    "Belarus": 0.5494,
+    "Kuwait": 0.5463
+  },
+  "test_y_stats": {
+    "mean": 3.880772398536585,
+    "std": 0.8160175188516576,
+    "min": 2.1114995,
+    "max": 5.779253
+  }
+}
