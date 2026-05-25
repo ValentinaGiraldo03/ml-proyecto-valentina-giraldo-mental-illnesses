@@ -2,7 +2,6 @@
 
 **Dataset:** *Mental Illnesses Prevalence* (IHME — Global Burden of Disease, publicado por Our World in Data).
 **Marco metodológico:** CRISP-DM.
-**Estado:** Entrega 1 ✅ · Entrega 2 ✅ · **Entrega 3 ✅** (versión final).
 
 Proyecto de regresión supervisada para estimar la **prevalencia de depresión**
 a nivel país-año a partir de la prevalencia de otros trastornos mentales
@@ -16,43 +15,7 @@ y orientar la planificación de recursos en salud pública.
 
 ---
 
-## 1. ¿Qué hay en esta carpeta?
-
-```
-project/
-├── README.md                                       ← este archivo
-├── requirements.txt                                ← dependencias de Python
-├── data/
-│   └── mental-illnesses-prevalence.csv
-├── notebooks/
-│   ├── 01_entrega1_eda_baseline.ipynb              ← Entrega 1: EDA + baseline
-│   ├── 02_entrega2_modelos_validacion.ipynb        ← Entrega 2: comparación + validación
-│   └── 03_entrega3_modelo_final.ipynb              ← Entrega 3: modelo final + interpretación
-├── figures/
-│   ├── 01-07*.png                                  (Entrega 1)
-│   ├── 08-13*.png                                  (Entrega 2)
-│   └── 14-23*.png                                  (Entrega 3 — desde aquí)
-├── report/
-│   ├── entrega1_reporte.pdf   ·  entrega1_metrics.json
-│   ├── entrega2_reporte.pdf   ·  entrega2_metrics.json
-│   ├── entrega3_reporte.pdf              ← reporte final
-│   ├── entrega3_executive_summary.pdf    ← resumen ejecutivo (~1 página)
-│   ├── entrega3_presentation.pdf         ← deck de presentación (8 slides)
-│   ├── entrega3_metrics.json             ← métricas finales (fuente única de la verdad)
-│   └── reproducibility_checklist.md      ← checklist de reproducibilidad
-├── poster/
-│   └── entrega3_poster.pdf               ← póster síntesis (A1)
-└── src/
-    ├── build_entrega2.py            ·  build_notebook_entrega2.py   ·  build_pdf_entrega2.py
-    ├── build_entrega3.py            ←   experimentos finales + figuras + JSON
-    ├── build_notebook_entrega3.py   ←   regenera notebook 03_*.ipynb
-    ├── build_pdf_entrega3.py        ←   regenera el reporte PDF final
-    ├── build_executive_summary.py   ←   regenera el resumen ejecutivo
-    ├── build_poster.py              ←   regenera el póster
-    └── build_presentation.py        ←   regenera el deck de presentación
-```
-
-## 2. ¿Cómo reproducir los resultados?
+## 1. ¿Cómo reproducir los resultados?
 
 ```bash
 # (dentro de la carpeta project/)
